@@ -1,0 +1,45 @@
+<%- include('./partials/header') %>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+          <h1>Lista de contatos</h1>
+        <% for(contato of contatos) { %>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"><%=contato.nome%></h5>
+                    <small>Email: <%=contato.email%></small>
+                  </div>
+                  <p class="mb-1">Mensagem: <%=contato.mensagem%></p>
+                </a>
+
+            </div>
+
+            <%  } %>
+      </div>
+      <div class="col">
+        
+        <h1>Lista de Assinantes da NewsLetter</h1>
+        <% for(contatoNewsletter of contatosnewsletter) { %>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"><%=contatoNewsletter.nome%></h5>
+                    <small>Email: <%=contatoNewsletter.email%></small>
+                  </div>
+                  <p class="mb-1">Data: <%=contatoNewsletter.date%></p>
+                </a>
+
+            </div>
+
+            <%  } %>
+
+
+
+      </div>
+    </div>
+    </div>
+<%- include('./partials/footer') %>
